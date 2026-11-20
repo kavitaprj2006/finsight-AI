@@ -1,0 +1,146 @@
+[
+  {
+    "headline": "Reliance Industries expands retail footprint with 50 new tech hubs across tier-2 cities",
+    "symbol": "RELIANCE.NS",
+    "market": "IN",
+    "source": "Mint Financial",
+    "days_ago": 1,
+    "sentiment": "Positive",
+    "published_at": "2026-11-19 09:57:33"
+  },
+  {
+    "headline": "TCS signs $1.2B digital transformation deal with European logistics giant",
+    "symbol": "TCS.NS",
+    "market": "IN",
+    "source": "Economic Times",
+    "days_ago": 2,
+    "sentiment": "Positive",
+    "published_at": "2026-11-18 18:57:33"
+  },
+  {
+    "headline": "Infosys raises full-year revenue growth forecast to 4.5% amidst strong cloud demand",
+    "symbol": "INFY.NS",
+    "market": "IN",
+    "source": "Business Standard",
+    "days_ago": 3,
+    "sentiment": "Positive",
+    "published_at": "2026-11-17 19:57:33"
+  },
+  {
+    "headline": "HDFC Bank deposit growth outpaces credit expansion in latest quarterly update",
+    "symbol": "HDFCBANK.NS",
+    "market": "IN",
+    "source": "MoneyControl",
+    "days_ago": 4,
+    "sentiment": "Positive",
+    "published_at": "2026-11-16 08:57:33"
+  },
+  {
+    "headline": "RBI keeps repo rate unchanged at 6.50% citing persistent food inflation concerns",
+    "symbol": "^NSEI",
+    "market": "IN",
+    "source": "Financial Express",
+    "days_ago": 5,
+    "sentiment": "Neutral",
+    "published_at": "2026-11-15 15:57:33"
+  },
+  {
+    "headline": "Foreign portfolio investors pull \u20b94,200 crore from Indian equities amid valuation caution",
+    "symbol": "^NSEI",
+    "market": "IN",
+    "source": "LiveMint",
+    "days_ago": 6,
+    "sentiment": "Negative",
+    "published_at": "2026-11-14 16:57:33"
+  },
+  {
+    "headline": "ICICI Bank reports 17% jump in quarterly net profit driven by lower loan loss provisions",
+    "symbol": "ICICIBANK.NS",
+    "market": "IN",
+    "source": "CNBC-TV18",
+    "days_ago": 7,
+    "sentiment": "Positive",
+    "published_at": "2026-11-13 16:57:33"
+  },
+  {
+    "headline": "Tech Mahindra and TCS face client spending delays in European manufacturing contracts",
+    "symbol": "TCS.NS",
+    "market": "IN",
+    "source": "Economic Times",
+    "days_ago": 9,
+    "sentiment": "Negative",
+    "published_at": "2026-11-11 17:57:33"
+  },
+  {
+    "headline": "NVIDIA unveils next-generation Blackwell Ultra AI server architecture with 4x inference throughput",
+    "symbol": "NVDA",
+    "market": "US",
+    "source": "Bloomberg",
+    "days_ago": 1,
+    "sentiment": "Positive",
+    "published_at": "2026-11-19 08:57:33"
+  },
+  {
+    "headline": "Apple integrates upgraded generative AI models across iOS suite with privacy-first silicon",
+    "symbol": "AAPL",
+    "market": "US",
+    "source": "Wall Street Journal",
+    "days_ago": 2,
+    "sentiment": "Positive",
+    "published_at": "2026-11-18 18:57:33"
+  },
+  {
+    "headline": "Microsoft Azure cloud revenue accelerates 29% YoY powered by enterprise Copilot adoption",
+    "symbol": "MSFT",
+    "market": "US",
+    "source": "Reuters",
+    "days_ago": 3,
+    "sentiment": "Positive",
+    "published_at": "2026-11-17 09:57:33"
+  },
+  {
+    "headline": "Alphabet faces renewed antitrust inquiry over digital advertising technology practices",
+    "symbol": "GOOGL",
+    "market": "US",
+    "source": "Financial Times",
+    "days_ago": 4,
+    "sentiment": "Negative",
+    "published_at": "2026-11-16 08:57:33"
+  },
+  {
+    "headline": "Federal Reserve signals gradual easing cycle as core PCE inflation cools toward 2.6%",
+    "symbol": "SPY",
+    "market": "US",
+    "source": "CNBC",
+    "days_ago": 5,
+    "sentiment": "Positive",
+    "published_at": "2026-11-15 11:57:33"
+  },
+  {
+    "headline": "Amazon Web Services announces multi-billion dollar capital expenditure expansion in datacenters",
+    "symbol": "AMZN",
+    "market": "US",
+    "source": "Barron's",
+    "days_ago": 6,
+    "sentiment": "Positive",
+    "published_at": "2026-11-14 18:57:33"
+  },
+  {
+    "headline": "Consumer spending cools in retail sector while credit card delinquencies tick higher",
+    "symbol": "SPY",
+    "market": "US",
+    "source": "MarketWatch",
+    "days_ago": 8,
+    "sentiment": "Negative",
+    "published_at": "2026-11-12 10:57:33"
+  },
+  {
+    "headline": "Semiconductor equipment suppliers report chip lead times normalize across automotive lines",
+    "symbol": "NVDA",
+    "market": "US",
+    "source": "Reuters",
+    "days_ago": 10,
+    "sentiment": "Neutral",
+    "published_at": "2026-11-10 13:57:33"
+  }
+]
