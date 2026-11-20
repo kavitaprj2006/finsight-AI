@@ -1,6 +1,13 @@
 """
 FinSight AI - Financial News Sentiment Intelligence
 TF-IDF vectorizer + Logistic Regression classifier for financial headlines.
+
+TRANSPARENCY & METHODOLOGY NOTICE:
+This model is trained on a small, curated example corpus of financial headlines to
+demonstrate text classification and sentiment extraction in an educational/prototyping setting.
+Confidence scores represent the classifier's class posterior probabilities (Softmax distribution)
+derived from the TF-IDF feature space, and should NOT be interpreted as guaranteed empirical
+real-world accuracy or factual prediction certainty.
 """
 from typing import Dict, List, Any, Tuple
 import re
@@ -10,6 +17,10 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import Pipeline
 
 class FinancialSentimentAnalyzer:
+    """
+    Financial sentiment analyzer using n-gram TF-IDF and Logistic Regression.
+    Trained on a curated educational corpus of corporate financial news headlines.
+    """
     def __init__(self):
         self.pipeline = Pipeline([
             ("tfidf", TfidfVectorizer(

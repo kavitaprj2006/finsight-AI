@@ -1,6 +1,7 @@
 """
 Unit Tests for Database Operations and Repository Logic
 """
+import uuid
 import pytest
 from app.database.repository import Repository
 
@@ -18,23 +19,25 @@ def test_add_remove_watchlist_item():
     wls = Repository.get_watchlists(user_id=user.id, market="IN")
     target_wl = wls[0]
 
+    sym = f"TEST_{uuid.uuid4().hex[:4].upper()}.NS"
     # Add item
-    added = Repository.add_to_watchlist(user.id, target_wl["name"], "WIPRO.NS", market="IN")
+    added = Repository.add_to_watchlist(user.id, target_wl["name"], sym, market="IN")
     assert added is True
 
     # Re-adding should return False
-    duplicate = Repository.add_to_watchlist(user.id, target_wl["name"], "WIPRO.NS", market="IN")
+    duplicate = Repository.add_to_watchlist(user.id, target_wl["name"], sym, market="IN")
     assert duplicate is False
 
     # Remove item
-    removed = Repository.remove_from_watchlist(user.id, target_wl["id"], "WIPRO.NS")
+    removed = Repository.remove_from_watchlist(user.id, target_wl["id"], sym)
     assert removed is True
 
 def test_paper_portfolio_transactions():
     user = Repository.get_or_create_default_user()
+    p_name = f"Test Fund {uuid.uuid4().hex[:8]}"
     pid = Repository.create_paper_portfolio(
         user_id=user.id,
-        name="Test Regression Fund",
+        name=p_name,
         market="IN",
         currency="INR",
         initial_cash=100000.0

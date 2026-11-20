@@ -98,13 +98,14 @@ class PortfolioService:
                 })
         return assets
 
-    def get_paper_portfolio_overview(self, portfolio_id: int) -> Dict[str, Any]:
+    def get_paper_portfolio_overview(self, portfolio_id: int, user_id: Optional[int] = None) -> Dict[str, Any]:
         """Calculates current holdings, market values, and P&L for a paper portfolio."""
         holdings = Repository.get_portfolio_holdings(portfolio_id)
         txs = Repository.get_portfolio_transactions(portfolio_id)
 
-        # Retrieve portfolio cash details from DB
-        portfolios = Repository.get_paper_portfolios(user_id=1) # Default user
+        # Retrieve portfolio cash details from DB using dynamic user context
+        effective_user_id = user_id if user_id is not None else Repository.get_or_create_default_user().id
+        portfolios = Repository.get_paper_portfolios(user_id=effective_user_id)
         curr_p = next((p for p in portfolios if p["id"] == portfolio_id), None)
         cash = curr_p["available_cash"] if curr_p else 0.0
         initial_cash = curr_p["initial_cash"] if curr_p else 100000.0

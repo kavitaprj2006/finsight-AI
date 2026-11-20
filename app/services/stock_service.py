@@ -53,23 +53,28 @@ class StockService:
     def get_market_overview(self, market: str = "IN") -> Dict[str, Any]:
         index_resp = self.provider.get_market_indices(market)
         symbols = DEFAULT_SYMBOLS.get(market, [])
+        # Only evaluate equities (excluding benchmark indices from individual stock movers)
+        stock_symbols = [s for s in symbols if s.get("sector") != "Index" and not s["symbol"].startswith("^")]
         quotes = []
-        for s in symbols:
+        for s in stock_symbols:
             q_resp = self.provider.get_quote(s["symbol"], market)
             if q_resp.is_success and q_resp.data is not None:
                 quotes.append(q_resp.data)
 
-        # Gainers & Losers
+        # Gainers (positive return, highest first)
         sorted_quotes = sorted(quotes, key=lambda x: x.change_percent, reverse=True)
         gainers = [q for q in sorted_quotes if q.change_percent > 0][:5]
-        losers = [q for q in sorted_quotes if q.change_percent < 0][-5:]
+        # Decliners (negative return, largest decline first)
+        losers = sorted([q for q in sorted_quotes if q.change_percent < 0], key=lambda x: x.change_percent)[:5]
 
         return {
             "index_quote": index_resp.data if index_resp.is_success else None,
             "all_quotes": quotes,
             "gainers": gainers,
             "losers": losers,
-            "is_sample": index_resp.is_sample
+            "is_sample": index_resp.is_sample if index_resp else True,
+            "universe_size": len(stock_symbols),
+            "tracked_count": len(quotes),
         }
 
     def search_stocks(self, query: str, market: str = "IN") -> List[Dict[str, Any]]:

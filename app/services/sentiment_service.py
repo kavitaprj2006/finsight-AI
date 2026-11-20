@@ -38,7 +38,8 @@ class SentimentService:
             "neutral_pct": round((neu_count / total * 100.0) if total else 0.0, 1),
             "avg_compound_score": round(avg_compound, 3),
             "provider": resp.provider,
-            "is_sample": resp.is_sample
+            "is_sample": resp.is_sample,
+            "is_cached": getattr(resp, "is_cached", False)
         }
 
 sentiment_service = SentimentService()

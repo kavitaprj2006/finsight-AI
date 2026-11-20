@@ -133,6 +133,25 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid rgba(240, 100, 112, 0.3);
 }
 
+/* Sentiment Badges (Independent of Data Provenance) */
+.badge-sentiment-pos {
+    background: rgba(34, 201, 151, 0.15);
+    color: #22C997;
+    border: 1px solid rgba(34, 201, 151, 0.3);
+}
+
+.badge-sentiment-neg {
+    background: rgba(240, 100, 112, 0.15);
+    color: #F06470;
+    border: 1px solid rgba(240, 100, 112, 0.3);
+}
+
+.badge-sentiment-neu {
+    background: rgba(148, 163, 184, 0.15);
+    color: #94A3B8;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
 /* Section Header */
 .section-header {
     display: flex;
